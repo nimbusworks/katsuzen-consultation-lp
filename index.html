@@ -20,9 +20,9 @@
   }
 
   .container {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
   }
 
   /* Header */
@@ -60,8 +60,16 @@
 
   /* Hero */
   .hero {
-    padding: 56px 0 44px;
-    text-align: center;
+    padding: 64px 0 52px;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-text {
+    text-align: left;
   }
   .hero-label {
     display: inline-block;
@@ -74,7 +82,7 @@
     margin-bottom: 24px;
   }
   .hero h1 {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 900;
     line-height: 1.4;
     margin-bottom: 20px;
@@ -95,11 +103,9 @@
   /* Hero image */
   .hero-img {
     width: 100%;
-    max-width: 680px;
-    margin: 0 auto 36px;
     display: block;
-    border-radius: 6px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
   }
 
   /* CTA Button */
@@ -341,16 +347,28 @@
   }
   .site-footer a { color: #aaa; text-decoration: none; }
 
-  /* Mobile adjustments */
+  /* Tablet */
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+    .hero-text { text-align: center; }
+    .hero-visual { max-width: 560px; margin: 0 auto; }
+    .btn-primary { max-width: 480px; margin: 0 auto; }
+    .container { padding: 0 28px; }
+  }
+
+  /* Mobile */
   @media (max-width: 600px) {
     body { font-size: 16px; }
+    .container { padding: 0 20px; }
+    .hero { padding: 40px 0 36px; }
     .hero h1 { font-size: 26px; }
+    .hero-sub { font-size: 15px; }
     .section-title { font-size: 20px; }
-    .stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
     .stat-num { font-size: 22px; }
-    .profile { gap: 16px; }
+    .stat-label { font-size: 11px; }
+    .profile { gap: 14px; }
     .profile-img { width: 80px; height: 80px; }
-    .hero-img { border-radius: 4px; }
     .btn-primary { font-size: 16px; padding: 18px 20px; }
   }
 </style>
@@ -368,17 +386,22 @@
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero-label">初回 30分 完全無料</div>
-    <h1>アメリカで<em>結果を出す</em>ために、<br>まず現状を聞かせてください。</h1>
-    <p class="hero-sub">
-      NYでリーダーシップ研修を手がけてきた大森智子が<br>
-      直接お話を伺います。売り込みはありません。
-    </p>
-    <img src="images/hero.png" alt="Tomoko Omori - Katsuzen USA" class="hero-img" onerror="this.style.display='none'">
-    <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="btn-primary">
-      30分の無料相談を予約する →
-    </a>
-    <p class="btn-note">Zoom・日本語対応・完全無料</p>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-label">初回 30分 完全無料</div>
+        <h1>アメリカで<em>結果を出す</em>ために、まず現状を聞かせてください。</h1>
+        <p class="hero-sub">
+          NYでリーダーシップ研修を手がけてきた大森智子が直接お話を伺います。売り込みはありません。
+        </p>
+        <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="btn-primary">
+          30分の無料相談を予約する →
+        </a>
+        <p class="btn-note">Zoom・日本語対応・完全無料</p>
+      </div>
+      <div class="hero-visual">
+        <img src="images/hero.png" alt="Tomoko Omori - Katsuzen USA" class="hero-img" onerror="this.style.display='none'">
+      </div>
+    </div>
   </div>
 </section>
 
