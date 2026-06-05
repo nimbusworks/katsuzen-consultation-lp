@@ -12,24 +12,24 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: #0a0a0a;
-    color: #f0f0f0;
+    background: #f9f7f4;
+    color: #1a1a1a;
     font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.75;
   }
 
   .container {
-    max-width: 640px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
   /* Header */
   .site-header {
-    background: #0a0a0a;
-    border-bottom: 2px solid #cc0000;
-    padding: 14px 0;
+    background: #111;
+    border-bottom: 3px solid #cc0000;
+    padding: 16px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -40,17 +40,17 @@
     justify-content: space-between;
   }
   .logo {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 900;
     letter-spacing: 0.08em;
     color: #fff;
   }
   .logo span { color: #cc0000; }
   .header-cta {
-    font-size: 11px;
+    font-size: 13px;
     background: #cc0000;
     color: #fff;
-    padding: 7px 14px;
+    padding: 9px 18px;
     border-radius: 2px;
     text-decoration: none;
     font-weight: 700;
@@ -60,58 +60,46 @@
 
   /* Hero */
   .hero {
-    padding: 48px 0 36px;
+    padding: 56px 0 44px;
     text-align: center;
   }
   .hero-label {
     display: inline-block;
     background: #cc0000;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.14em;
-    padding: 5px 14px;
-    margin-bottom: 20px;
+    padding: 6px 16px;
+    margin-bottom: 24px;
   }
   .hero h1 {
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 900;
-    line-height: 1.45;
-    margin-bottom: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
     letter-spacing: -0.01em;
+    color: #111;
   }
   .hero h1 em {
     font-style: normal;
     color: #cc0000;
   }
   .hero-sub {
-    font-size: 14px;
-    color: #aaa;
-    margin-bottom: 32px;
-    line-height: 1.8;
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 36px;
+    line-height: 1.85;
   }
 
   /* Hero image */
   .hero-img {
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto 32px;
+    max-width: 680px;
+    margin: 0 auto 36px;
     display: block;
-    border-radius: 4px;
-  }
-  .hero-img-placeholder {
-    width: 100%;
-    max-width: 500px;
-    height: 280px;
-    margin: 0 auto 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 4px;
-    color: #555;
-    font-size: 13px;
+    border-radius: 6px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   }
 
   /* CTA Button */
@@ -120,100 +108,104 @@
     background: #cc0000;
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 900;
-    letter-spacing: 0.06em;
-    padding: 18px 24px;
+    letter-spacing: 0.04em;
+    padding: 20px 32px;
     border-radius: 3px;
     text-align: center;
     transition: background 0.2s;
     margin: 0 auto;
+    max-width: 480px;
   }
   .btn-primary:hover { background: #aa0000; }
   .btn-note {
-    font-size: 12px;
-    color: #777;
+    font-size: 13px;
+    color: #888;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   /* Divider */
   .divider {
     border: none;
-    border-top: 1px solid #222;
-    margin: 40px 0;
+    border-top: 1px solid #e0dbd5;
+    margin: 0;
   }
 
   /* Profile */
   .profile {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: flex-start;
-    padding: 32px 0;
+    padding: 40px 0;
   }
   .profile-img {
-    width: 88px;
-    height: 88px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    background: #222;
+    background: #e0dbd5;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
-    color: #555;
-    border: 2px solid #333;
+    font-size: 12px;
+    color: #999;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   .profile-info h2 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 900;
     margin-bottom: 4px;
+    color: #111;
   }
   .profile-info .title {
-    font-size: 12px;
+    font-size: 13px;
     color: #cc0000;
     font-weight: 700;
     letter-spacing: 0.08em;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .profile-info p {
-    font-size: 13px;
-    color: #bbb;
-    line-height: 1.75;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
   }
 
   /* Stats */
   .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 24px 0;
+    gap: 16px;
+    padding: 0 0 32px;
   }
   .stat {
     text-align: center;
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 4px;
-    padding: 16px 8px;
+    background: #fff;
+    border: 1px solid #e0dbd5;
+    border-radius: 6px;
+    padding: 20px 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
   .stat-num {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 900;
     color: #cc0000;
     line-height: 1;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .stat-label {
-    font-size: 11px;
-    color: #888;
+    font-size: 13px;
+    color: #666;
     line-height: 1.4;
   }
 
   /* Section header */
   .section-label {
     display: inline-block;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.14em;
     color: #cc0000;
@@ -222,10 +214,11 @@
     margin-bottom: 16px;
   }
   .section-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    color: #111;
   }
 
   /* Process steps */
@@ -233,34 +226,36 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   .step {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     align-items: flex-start;
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 4px;
-    padding: 18px 16px;
+    background: #fff;
+    border: 1px solid #e0dbd5;
+    border-radius: 6px;
+    padding: 22px 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
   .step-num {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 900;
     color: #cc0000;
     line-height: 1;
     flex-shrink: 0;
-    width: 32px;
+    width: 36px;
   }
   .step-content h3 {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    color: #111;
   }
   .step-content p {
-    font-size: 13px;
-    color: #aaa;
-    line-height: 1.65;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
   }
 
   /* What to expect */
@@ -268,87 +263,95 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 32px;
+    gap: 14px;
+    margin-bottom: 36px;
   }
   .expect-list li {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     align-items: flex-start;
-    font-size: 14px;
-    color: #ccc;
-    line-height: 1.65;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
   }
   .expect-list li::before {
     content: "✓";
     color: #cc0000;
     font-weight: 900;
+    font-size: 18px;
     flex-shrink: 0;
-    margin-top: 1px;
+    margin-top: 0px;
   }
 
   /* Testimonial */
   .testimonial {
-    background: #111;
-    border-left: 3px solid #cc0000;
-    border-radius: 0 4px 4px 0;
-    padding: 20px 20px 20px 24px;
+    background: #fff;
+    border-left: 4px solid #cc0000;
+    border-radius: 0 6px 6px 0;
+    padding: 24px 24px 24px 28px;
     margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
   .testimonial blockquote {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #ddd;
-    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #333;
+    margin-bottom: 14px;
     font-style: normal;
   }
   .testimonial cite {
-    font-size: 12px;
+    font-size: 13px;
     color: #888;
     font-style: normal;
   }
 
   /* No-sell box */
   .no-sell {
-    background: #0f1a0f;
-    border: 1px solid #2a4a2a;
-    border-radius: 4px;
-    padding: 24px 20px;
-    margin-bottom: 32px;
+    background: #f0f7f0;
+    border: 1px solid #b0d4b0;
+    border-radius: 6px;
+    padding: 28px 24px;
+    margin-bottom: 36px;
   }
   .no-sell h3 {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
-    color: #6aaa6a;
-    margin-bottom: 10px;
+    color: #2a7a2a;
+    margin-bottom: 12px;
   }
   .no-sell p {
-    font-size: 13px;
-    color: #bbb;
-    line-height: 1.75;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
   }
 
   /* Section padding */
   .section {
-    padding: 40px 0;
+    padding: 48px 0;
   }
 
   /* Footer */
   .site-footer {
-    border-top: 1px solid #1a1a1a;
-    padding: 24px 0;
+    background: #111;
+    border-top: 2px solid #cc0000;
+    padding: 28px 0;
     text-align: center;
-    font-size: 12px;
-    color: #555;
+    font-size: 13px;
+    color: #888;
   }
+  .site-footer a { color: #aaa; text-decoration: none; }
 
   /* Mobile adjustments */
-  @media (max-width: 480px) {
-    .hero h1 { font-size: 22px; }
-    .stats { grid-template-columns: repeat(3, 1fr); }
-    .stat-num { font-size: 20px; }
-    .profile { gap: 14px; }
-    .profile-img { width: 72px; height: 72px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .hero h1 { font-size: 26px; }
+    .section-title { font-size: 20px; }
+    .stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .stat-num { font-size: 22px; }
+    .profile { gap: 16px; }
+    .profile-img { width: 80px; height: 80px; }
+    .hero-img { border-radius: 4px; }
+    .btn-primary { font-size: 16px; padding: 18px 20px; }
   }
 </style>
 </head>
@@ -501,7 +504,7 @@
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 Katsuzen USA / Tomoko Omori. All rights reserved.</p>
-    <p style="margin-top:6px;"><a href="https://tomokoomori.com" style="color:#555;text-decoration:none;">tomokoomori.com</a></p>
+    <p style="margin-top:6px;"><a href="https://tomokoomori.com">tomokoomori.com</a></p>
   </div>
 </footer>
 
