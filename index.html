@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30分 無料個別相談 | Tomoko Omori / Katsuzen USA</title>
+<meta name="description" content="アメリカでのビジネス・リーダーシップに関する30分の無料個別相談。大森智子が直接お話を伺います。売り込みなし。まず現状を聞かせてください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    color: #f0f0f0;
+    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  .site-header {
+    background: #0a0a0a;
+    border-bottom: 2px solid #cc0000;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #fff;
+  }
+  .logo span { color: #cc0000; }
+  .header-cta {
+    font-size: 11px;
+    background: #cc0000;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 36px;
+    text-align: center;
+  }
+  .hero-label {
+    display: inline-block;
+    background: #cc0000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: #cc0000;
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+
+  /* Hero image */
+  .hero-img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 32px;
+    display: block;
+    border-radius: 4px;
+  }
+  .hero-img-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #555;
+    font-size: 13px;
+  }
+
+  /* CTA Button */
+  .btn-primary {
+    display: block;
+    background: #cc0000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    padding: 18px 24px;
+    border-radius: 3px;
+    text-align: center;
+    transition: background 0.2s;
+    margin: 0 auto;
+  }
+  .btn-primary:hover { background: #aa0000; }
+  .btn-note {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Divider */
+  .divider {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 40px 0;
+  }
+
+  /* Profile */
+  .profile {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 32px 0;
+  }
+  .profile-img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #555;
+    border: 2px solid #333;
+  }
+  .profile-info h2 {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 4px;
+  }
+  .profile-info .title {
+    font-size: 12px;
+    color: #cc0000;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .profile-info p {
+    font-size: 13px;
+    color: #bbb;
+    line-height: 1.75;
+  }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 24px 0;
+  }
+  .stat {
+    text-align: center;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 16px 8px;
+  }
+  .stat-num {
+    font-size: 24px;
+    font-weight: 900;
+    color: #cc0000;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: #888;
+    line-height: 1.4;
+  }
+
+  /* Section header */
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #cc0000;
+    border-left: 3px solid #cc0000;
+    padding-left: 10px;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  /* Process steps */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 18px 16px;
+  }
+  .step-num {
+    font-size: 22px;
+    font-weight: 900;
+    color: #cc0000;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 32px;
+  }
+  .step-content h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .step-content p {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.65;
+  }
+
+  /* What to expect */
+  .expect-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .expect-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.65;
+  }
+  .expect-list li::before {
+    content: "✓";
+    color: #cc0000;
+    font-weight: 900;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* Testimonial */
+  .testimonial {
+    background: #111;
+    border-left: 3px solid #cc0000;
+    border-radius: 0 4px 4px 0;
+    padding: 20px 20px 20px 24px;
+    margin-bottom: 16px;
+  }
+  .testimonial blockquote {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 12px;
+    font-style: normal;
+  }
+  .testimonial cite {
+    font-size: 12px;
+    color: #888;
+    font-style: normal;
+  }
+
+  /* No-sell box */
+  .no-sell {
+    background: #0f1a0f;
+    border: 1px solid #2a4a2a;
+    border-radius: 4px;
+    padding: 24px 20px;
+    margin-bottom: 32px;
+  }
+  .no-sell h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #6aaa6a;
+    margin-bottom: 10px;
+  }
+  .no-sell p {
+    font-size: 13px;
+    color: #bbb;
+    line-height: 1.75;
+  }
+
+  /* Section padding */
+  .section {
+    padding: 40px 0;
+  }
+
+  /* Footer */
+  .site-footer {
+    border-top: 1px solid #1a1a1a;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 22px; }
+    .stats { grid-template-columns: repeat(3, 1fr); }
+    .stat-num { font-size: 20px; }
+    .profile { gap: 14px; }
+    .profile-img { width: 72px; height: 72px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="logo">KATSUZEN <span>USA</span></div>
+    <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="header-cta">無料相談を予約する</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-label">初回 30分 完全無料</div>
+    <h1>アメリカで<em>結果を出す</em>ために、<br>まず現状を聞かせてください。</h1>
+    <p class="hero-sub">
+      NYでリーダーシップ研修を手がけてきた大森智子が<br>
+      直接お話を伺います。売り込みはありません。
+    </p>
+    <img src="images/hero.png" alt="Tomoko Omori - Katsuzen USA" class="hero-img" onerror="this.style.display='none'">
+    <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="btn-primary">
+      30分の無料相談を予約する →
+    </a>
+    <p class="btn-note">Zoom・日本語対応・完全無料</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Profile -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">ABOUT</div>
+    <div class="profile">
+      <div class="profile-img">photo</div>
+      <div class="profile-info">
+        <h2>大森 智子</h2>
+        <div class="title">Katsuzen USA 代表 / リーダーシップコーチ</div>
+        <p>ニューヨークを拠点に、日系企業・個人を対象としたリーダーシップ研修・個別コーチングを提供。アメリカビジネスの現場で通用する「伝える力」と「動かす力」を専門とする。</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">15<span style="font-size:14px">年</span></div>
+        <div class="stat-label">NYビジネス<br>経験</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">200<span style="font-size:14px">+</span></div>
+        <div class="stat-label">研修・<br>コーチング実績</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">日<span style="font-size:14px">/</span>英</div>
+        <div class="stat-label">バイリンガル<br>対応</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Process -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">HOW IT WORKS</div>
+    <h2 class="section-title">相談の流れ</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>カレンダーで日時を選ぶ</h3>
+          <p>下のボタンから空き時間を確認して予約。自動でリマインダーが届きます。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Zoomで30分お話しする</h3>
+          <p>現状・課題・目標を聞かせてください。あなたのケースに合わせてお話しします。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>具体的な次の一手を持ち帰る</h3>
+          <p>フィットしても・しなくても、相談後に「次にやること」が明確になります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- What we cover -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">WHAT WE COVER</div>
+    <h2 class="section-title">こんな方に話を聞いています</h2>
+    <ul class="expect-list">
+      <li>アメリカでのビジネス展開を検討しているが、何から始めればいいかわからない</li>
+      <li>チームや部下に自分の意図が伝わらず、動いてもらえないと感じている</li>
+      <li>英語でのプレゼン・交渉に自信が持てない</li>
+      <li>NYや米国市場で実績を出したいが、現地感覚がつかめていない</li>
+      <li>リーダーとしての自分をアメリカのフィールドで再定義したい</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Testimonials -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">VOICES</div>
+    <h2 class="section-title">参加者の声</h2>
+    <div class="testimonial">
+      <blockquote>「最初は半信半疑でしたが、30分で自分の課題がはっきりしました。次のミーティングで早速実践して、チームの反応が明らかに変わりました。」</blockquote>
+      <cite>— 米系企業勤務・40代男性</cite>
+    </div>
+    <div class="testimonial">
+      <blockquote>「英語でのコミュニケーションに悩んでいましたが、問題は英語力ではなく伝え方の設計だとわかりました。具体的なアドバイスをすぐに使えました。」</blockquote>
+      <cite>— 日系スタートアップ・30代女性</cite>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- No-sell + CTA -->
+<section class="section">
+  <div class="container">
+    <div class="no-sell">
+      <h3>売り込みは一切ありません</h3>
+      <p>この相談は、あなたの現状を理解するための時間です。弊社サービスへの勧誘や押し売りは行いません。もし継続的なサポートが必要と判断した場合にのみ、選択肢としてご案内します。フィットしなければ、率直にそうお伝えします。</p>
+    </div>
+
+    <h2 class="section-title" style="text-align:center;">まず、話してみてください。</h2>
+    <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="btn-primary">
+      30分の無料相談を予約する →
+    </a>
+    <p class="btn-note">Zoom・日本語対応・完全無料 ／ 予約後すぐに確認メールが届きます</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Katsuzen USA / Tomoko Omori. All rights reserved.</p>
+    <p style="margin-top:6px;"><a href="https://tomokoomori.com" style="color:#555;text-decoration:none;">tomokoomori.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
