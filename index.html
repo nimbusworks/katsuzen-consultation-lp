@@ -1,538 +1,1067 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>30分 無料個別相談 | Tomoko Omori / Katsuzen USA</title>
-<meta name="description" content="アメリカでのビジネス・リーダーシップに関する30分の無料個別相談。大森智子が直接お話を伺います。売り込みなし。まず現状を聞かせてください。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>30分 無料個別相談 | Tomoko Omori / Katsuzen USA</title>
+    <meta
+      name="description"
+      content="NYでリーダーシップ研修を手がける大森智子が、アメリカで結果を出すための現状整理と次の一手を30分で一緒に明確にします。"
+    />
+    <style>
+      :root {
+        --black: #090909;
+        --ink: #151515;
+        --charcoal: #1c1b1a;
+        --red: #df0012;
+        --deep-red: #9e000d;
+        --paper: #f7f3ed;
+        --white: #fffdf8;
+        --muted: #c9c1b6;
+        --line: rgba(255, 255, 255, 0.16);
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+      }
 
-  body {
-    background: #f9f7f4;
-    color: #1a1a1a;
-    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-  }
+      * {
+        box-sizing: border-box;
+      }
 
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
+      html {
+        scroll-behavior: smooth;
+      }
 
-  /* Header */
-  .site-header {
-    background: #111;
-    border-bottom: 3px solid #cc0000;
-    padding: 16px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    color: #fff;
-  }
-  .logo span { color: #cc0000; }
-  .header-cta {
-    font-size: 13px;
-    background: #cc0000;
-    color: #fff;
-    padding: 9px 18px;
-    border-radius: 2px;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-  }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family:
+          "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", Meiryo,
+          system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.75;
+      }
 
-  /* Hero */
-  .hero {
-    padding: 64px 0 52px;
-  }
-  .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 56px;
-    align-items: center;
-    min-height: 520px;
-  }
-  .hero-text {
-    text-align: left;
-  }
-  .hero-label {
-    display: inline-block;
-    background: #cc0000;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    padding: 6px 16px;
-    margin-bottom: 24px;
-  }
-  .hero h1 {
-    font-size: 36px;
-    font-weight: 900;
-    line-height: 1.35;
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
-    color: #111;
-  }
-  .hero h1 em {
-    font-style: normal;
-    color: #cc0000;
-  }
-  .hero-sub {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 36px;
-    line-height: 1.85;
-  }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-  /* Hero image */
-  .hero-img {
-    width: 100%;
-    min-height: 480px;
-    object-fit: cover;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 12px 48px rgba(0,0,0,0.18);
-  }
+      img {
+        display: block;
+        max-width: 100%;
+      }
 
-  /* CTA Button */
-  .btn-primary {
-    display: block;
-    background: #cc0000;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 0.04em;
-    padding: 20px 32px;
-    border-radius: 3px;
-    text-align: center;
-    transition: background 0.2s;
-    margin: 0 auto;
-    max-width: 480px;
-  }
-  .btn-primary:hover { background: #aa0000; }
-  .btn-note {
-    font-size: 13px;
-    color: #888;
-    text-align: center;
-    margin-top: 12px;
-  }
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 2px solid var(--red);
+        background: rgba(9, 9, 9, 0.94);
+        backdrop-filter: blur(16px);
+      }
 
-  /* Divider */
-  .divider {
-    border: none;
-    border-top: 1px solid #e0dbd5;
-    margin: 0;
-  }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        min-height: 76px;
+        gap: 20px;
+      }
 
-  /* Profile */
-  .profile {
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-    padding: 40px 0;
-  }
-  .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    background: #e0dbd5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: #999;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
-  }
-  .profile-info h2 {
-    font-size: 22px;
-    font-weight: 900;
-    margin-bottom: 4px;
-    color: #111;
-  }
-  .profile-info .title {
-    font-size: 13px;
-    color: #cc0000;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    margin-bottom: 12px;
-  }
-  .profile-info p {
-    font-size: 16px;
-    color: #444;
-    line-height: 1.8;
-  }
+      .logo {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 7px;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+      }
 
-  /* Stats */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 0 0 32px;
-  }
-  .stat {
-    text-align: center;
-    background: #fff;
-    border: 1px solid #e0dbd5;
-    border-radius: 6px;
-    padding: 20px 12px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  }
-  .stat-num {
-    font-size: 28px;
-    font-weight: 900;
-    color: #cc0000;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .stat-label {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.4;
-  }
+      .logo span {
+        color: var(--red);
+      }
 
-  /* Section header */
-  .section-label {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    color: #cc0000;
-    border-left: 3px solid #cc0000;
-    padding-left: 10px;
-    margin-bottom: 16px;
-  }
-  .section-title {
-    font-size: 22px;
-    font-weight: 900;
-    line-height: 1.4;
-    margin-bottom: 24px;
-    color: #111;
-  }
+      .header-cta,
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: var(--red);
+        color: var(--white);
+        font-weight: 900;
+        line-height: 1.2;
+        box-shadow: 0 14px 30px rgba(223, 0, 18, 0.26);
+        transition:
+          transform 180ms ease,
+          background 180ms ease,
+          box-shadow 180ms ease;
+      }
 
-  /* Process steps */
-  .steps {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 36px;
-  }
-  .step {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    background: #fff;
-    border: 1px solid #e0dbd5;
-    border-radius: 6px;
-    padding: 22px 20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  }
-  .step-num {
-    font-size: 26px;
-    font-weight: 900;
-    color: #cc0000;
-    line-height: 1;
-    flex-shrink: 0;
-    width: 36px;
-  }
-  .step-content h3 {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: #111;
-  }
-  .step-content p {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.7;
-  }
+      .header-cta {
+        min-height: 44px;
+        padding: 0 22px;
+        font-size: 14px;
+      }
 
-  /* What to expect */
-  .expect-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-bottom: 36px;
-  }
-  .expect-list li {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    font-size: 16px;
-    color: #333;
-    line-height: 1.7;
-  }
-  .expect-list li::before {
-    content: "✓";
-    color: #cc0000;
-    font-weight: 900;
-    font-size: 18px;
-    flex-shrink: 0;
-    margin-top: 0px;
-  }
+      .button {
+        min-height: 64px;
+        padding: 0 32px;
+        font-size: 18px;
+      }
 
-  /* Testimonial */
-  .testimonial {
-    background: #fff;
-    border-left: 4px solid #cc0000;
-    border-radius: 0 6px 6px 0;
-    padding: 24px 24px 24px 28px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  }
-  .testimonial blockquote {
-    font-size: 16px;
-    line-height: 1.85;
-    color: #333;
-    margin-bottom: 14px;
-    font-style: normal;
-  }
-  .testimonial cite {
-    font-size: 13px;
-    color: #888;
-    font-style: normal;
-  }
+      .header-cta:hover,
+      .button:hover {
+        background: #ff0015;
+        box-shadow: 0 18px 40px rgba(223, 0, 18, 0.34);
+        transform: translateY(-2px);
+      }
 
-  /* No-sell box */
-  .no-sell {
-    background: #f0f7f0;
-    border: 1px solid #b0d4b0;
-    border-radius: 6px;
-    padding: 28px 24px;
-    margin-bottom: 36px;
-  }
-  .no-sell h3 {
-    font-size: 17px;
-    font-weight: 700;
-    color: #2a7a2a;
-    margin-bottom: 12px;
-  }
-  .no-sell p {
-    font-size: 15px;
-    color: #444;
-    line-height: 1.8;
-  }
+      .hero {
+        position: relative;
+        min-height: 88svh;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.58) 40%, rgba(0, 0, 0, 0.08) 78%),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.02) 70%, rgba(9, 9, 9, 0.76) 100%),
+          url("./images/hero-selected.png") center right / cover no-repeat;
+      }
 
-  /* Section padding */
-  .section {
-    padding: 48px 0;
-  }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(90deg, #000 0%, transparent 72%);
+        pointer-events: none;
+      }
 
-  /* Footer */
-  .site-footer {
-    background: #111;
-    border-top: 2px solid #cc0000;
-    padding: 28px 0;
-    text-align: center;
-    font-size: 13px;
-    color: #888;
-  }
-  .site-footer a { color: #aaa; text-decoration: none; }
+      .hero-inner {
+        position: relative;
+        display: grid;
+        align-content: center;
+        width: min(1120px, calc(100% - 40px));
+        min-height: calc(88svh - 76px);
+        margin: 0 auto;
+        padding: 72px 0 40px;
+      }
 
-  /* Tablet */
-  @media (max-width: 860px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 36px; }
-    .hero-text { text-align: center; }
-    .hero-visual { max-width: 560px; margin: 0 auto; }
-    .btn-primary { max-width: 480px; margin: 0 auto; }
-    .container { padding: 0 28px; }
-  }
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 24px;
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
 
-  /* Mobile */
-  @media (max-width: 600px) {
-    body { font-size: 16px; }
-    .container { padding: 0 20px; }
-    .hero { padding: 40px 0 36px; }
-    .hero h1 { font-size: 26px; }
-    .hero-sub { font-size: 15px; }
-    .section-title { font-size: 20px; }
-    .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .stat-num { font-size: 22px; }
-    .stat-label { font-size: 11px; }
-    .profile { gap: 14px; }
-    .profile-img { width: 80px; height: 80px; }
-    .btn-primary { font-size: 16px; padding: 18px 20px; }
-  }
-</style>
-</head>
-<body>
+      .eyebrow::before {
+        content: "";
+        width: 34px;
+        height: 3px;
+        background: var(--red);
+      }
 
-<!-- Header -->
-<header class="site-header">
-  <div class="container">
-    <div class="logo">KATSUZEN <span>USA</span></div>
-    <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="header-cta">無料相談を予約する</a>
-  </div>
-</header>
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
 
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <div class="hero-label">初回 30分 完全無料</div>
-        <h1>アメリカで<em>結果を出す</em>ために、まず現状を聞かせてください。</h1>
-        <p class="hero-sub">
-          NYでリーダーシップ研修を手がけてきた大森智子が直接お話を伺います。売り込みはありません。
-        </p>
-        <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="btn-primary">
-          30分の無料相談を予約する →
-        </a>
-        <p class="btn-note">Zoom・日本語対応・完全無料</p>
+      h1 {
+        max-width: 880px;
+        margin-bottom: 22px;
+        font-size: 72px;
+        line-height: 1.08;
+        letter-spacing: 0;
+        font-weight: 1000;
+        -webkit-text-stroke: 1px currentColor;
+        paint-order: stroke fill;
+        text-shadow:
+          1px 0 0 currentColor,
+          -1px 0 0 currentColor,
+          0 1px 0 currentColor,
+          0 -1px 0 currentColor,
+          1px 1px 0 currentColor,
+          -1px 1px 0 currentColor,
+          0 4px 0 rgba(0, 0, 0, 0.18),
+          0 16px 38px rgba(0, 0, 0, 0.68);
+      }
+
+      h1 strong,
+      .red {
+        color: var(--red);
+      }
+
+      h1 strong {
+        display: inline;
+        white-space: nowrap;
+      }
+
+      .keep-phrase,
+      .section h2,
+      .problem h3,
+      .outcome h3,
+      .flow-step h3 {
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+        line-break: strict;
+      }
+
+      .nowrap {
+        white-space: nowrap;
+      }
+
+      .phrase {
+        display: inline-block;
+      }
+
+      h1 strong .phrase + .phrase {
+        margin-left: 0.14em;
+      }
+
+      .hero-lead {
+        max-width: 620px;
+        margin-bottom: 34px;
+        color: rgba(255, 253, 248, 0.84);
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .hero-note {
+        color: rgba(255, 253, 248, 0.72);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .proof-strip {
+        position: relative;
+        z-index: 2;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: var(--black);
+        color: var(--white);
+      }
+
+      .proof-inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .proof-item {
+        min-height: 118px;
+        padding: 24px 28px;
+        border-left: 1px solid var(--line);
+      }
+
+      .proof-item:last-child {
+        border-right: 1px solid var(--line);
+      }
+
+      .proof-number {
+        display: block;
+        color: var(--red);
+        font-size: 38px;
+        line-height: 1;
+        font-weight: 950;
+      }
+
+      .proof-label {
+        display: block;
+        margin-top: 8px;
+        color: rgba(255, 253, 248, 0.78);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .section {
+        padding: 94px 0;
+      }
+
+      .section.dark {
+        color: var(--white);
+        background:
+          linear-gradient(180deg, #0a0a0a 0%, #171514 100%);
+      }
+
+      .section.red-band {
+        color: var(--white);
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.25)),
+          var(--deep-red);
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+        gap: 48px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+
+      .section-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+        color: var(--red);
+        font-size: 12px;
+        font-weight: 950;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .section-kicker::before {
+        content: "";
+        width: 6px;
+        height: 28px;
+        background: var(--red);
+      }
+
+      .section h2 {
+        margin-bottom: 0;
+        font-size: 38px;
+        line-height: 1.22;
+        letter-spacing: 0;
+        font-weight: 950;
+        text-wrap: balance;
+      }
+
+      .section-copy {
+        margin-bottom: 0;
+        color: #5f5750;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .dark .section-copy {
+        color: rgba(255, 253, 248, 0.74);
+      }
+
+      .problem-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .problem {
+        min-height: 210px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.045);
+      }
+
+      .problem-number {
+        display: block;
+        margin-bottom: 28px;
+        color: var(--red);
+        font-size: 14px;
+        font-weight: 950;
+      }
+
+      .problem h3 {
+        margin-bottom: 12px;
+        font-size: 21px;
+        line-height: 1.45;
+      }
+
+      .problem p {
+        margin-bottom: 0;
+        color: rgba(255, 253, 248, 0.68);
+        font-size: 14px;
+      }
+
+      .outcomes {
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        gap: 54px;
+        align-items: center;
+      }
+
+      .portrait-frame {
+        position: relative;
+        min-height: 520px;
+        overflow: hidden;
+        background: var(--charcoal);
+        box-shadow: var(--shadow);
+      }
+
+      .portrait-frame img {
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+        object-fit: cover;
+      }
+
+      .portrait-frame::after {
+        content: "KATSUZEN USA";
+        position: absolute;
+        right: 22px;
+        bottom: 18px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 12px;
+        font-weight: 950;
+        letter-spacing: 0.14em;
+      }
+
+      .portrait-frame.consultation-visual::after {
+        content: "ZOOM CONSULTATION";
+        background: var(--red);
+        padding: 6px 12px;
+        color: var(--white);
+      }
+
+      .portrait-frame.consultation-visual img {
+        object-position: center 18%;
+      }
+
+      .outcome-list {
+        display: grid;
+        gap: 18px;
+        margin: 30px 0 34px;
+      }
+
+      .outcome {
+        display: grid;
+        grid-template-columns: 54px 1fr;
+        gap: 18px;
+        align-items: start;
+        padding: 22px 0;
+        border-bottom: 1px solid rgba(21, 21, 21, 0.14);
+      }
+
+      .outcome-mark {
+        display: grid;
+        place-items: center;
+        width: 54px;
+        height: 54px;
+        background: var(--black);
+        color: var(--white);
+        font-weight: 950;
+      }
+
+      .outcome h3 {
+        margin-bottom: 6px;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      .outcome p {
+        margin-bottom: 0;
+        color: #625a52;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .profile {
+        display: grid;
+        grid-template-columns: 0.9fr 1fr;
+        gap: 56px;
+        align-items: center;
+      }
+
+      .profile-copy h2 {
+        margin-bottom: 18px;
+      }
+
+      .role {
+        margin-bottom: 22px;
+        color: var(--red);
+        font-weight: 950;
+      }
+
+      .profile-copy p {
+        color: rgba(255, 253, 248, 0.74);
+        font-weight: 700;
+      }
+
+      .profile-points {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .profile-point {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        padding: 18px;
+        color: rgba(255, 253, 248, 0.84);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .flow {
+        display: grid;
+        gap: 1px;
+        background: rgba(21, 21, 21, 0.16);
+      }
+
+      .flow-layout {
+        display: grid;
+        grid-template-columns: 0.92fr 1fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .session-frame {
+        position: relative;
+        margin: 0;
+        min-height: 100%;
+        overflow: hidden;
+        background: var(--black);
+        box-shadow: 0 24px 60px rgba(18, 14, 10, 0.16);
+      }
+
+      .session-frame img {
+        width: 100%;
+        height: 100%;
+        min-height: 420px;
+        object-fit: cover;
+        object-position: center 18%;
+      }
+
+      .session-frame::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 52%, rgba(0, 0, 0, 0.62) 100%);
+      }
+
+      .session-badge {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 14px;
+        background: var(--red);
+        color: var(--white);
+        font-size: 12px;
+        font-weight: 950;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .flow-step {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 28px;
+        align-items: center;
+        padding: 32px;
+        background: var(--white);
+      }
+
+      .step-number {
+        color: var(--red);
+        font-size: 46px;
+        line-height: 1;
+        font-weight: 950;
+      }
+
+      .flow-step h3 {
+        margin-bottom: 6px;
+        font-size: 21px;
+      }
+
+      .flow-step p {
+        margin-bottom: 0;
+        color: #5f5750;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .voice-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      blockquote {
+        margin: 0;
+        padding: 30px;
+        border-left: 6px solid var(--red);
+        background: var(--white);
+        box-shadow: 0 20px 48px rgba(18, 14, 10, 0.08);
+      }
+
+      blockquote p {
+        margin-bottom: 18px;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      cite {
+        color: #766d63;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 800;
+      }
+
+      .final-cta {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .final-cta h2 {
+        margin-bottom: 14px;
+        font-size: 42px;
+      }
+
+      .final-cta p {
+        max-width: 660px;
+        margin-bottom: 0;
+        color: rgba(255, 253, 248, 0.82);
+        font-weight: 800;
+      }
+
+      .site-footer {
+        padding: 32px 0 96px;
+        color: rgba(255, 253, 248, 0.62);
+        background: var(--black);
+        font-size: 13px;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        gap: 12px;
+      }
+
+      .mobile-fixed-cta {
+        display: none;
+      }
+
+      @media (max-width: 860px) {
+        .header-inner {
+          width: min(100% - 28px, 1120px);
+          min-height: 70px;
+        }
+
+        .header-cta {
+          padding: 0 14px;
+          font-size: 12px;
+        }
+
+        .hero {
+          min-height: auto;
+          background:
+            linear-gradient(180deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.56) 46%, rgba(0, 0, 0, 0.1) 100%),
+            url("./images/hero-selected.png") 56% top / cover no-repeat;
+        }
+
+        .hero-inner {
+          width: min(100% - 34px, 1120px);
+          min-height: 720px;
+          align-content: start;
+          padding: 82px 0 280px;
+        }
+
+        h1 {
+          max-width: 100%;
+          font-size: 39px;
+          line-height: 1.14;
+        }
+
+        h1 strong {
+          display: block;
+          white-space: normal;
+        }
+
+        h1 .phrase {
+          white-space: nowrap;
+        }
+
+        .hero-lead {
+          font-size: 15px;
+        }
+
+        .button {
+          width: 100%;
+          min-height: 58px;
+          padding: 0 20px;
+          font-size: 16px;
+        }
+
+        .proof-inner,
+        .problem-grid,
+        .voice-grid,
+        .profile-points {
+          grid-template-columns: 1fr;
+        }
+
+        .proof-item,
+        .proof-item:last-child {
+          border-right: 1px solid var(--line);
+        }
+
+        .section {
+          padding: 68px 0;
+        }
+
+        .wrap {
+          width: min(100% - 34px, 1120px);
+        }
+
+        .section-head,
+        .outcomes,
+        .profile,
+        .final-cta,
+        .flow-layout {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .section h2,
+        .final-cta h2 {
+          font-size: 30px;
+          line-height: 1.32;
+        }
+
+        .portrait-frame,
+        .portrait-frame img {
+          min-height: 420px;
+        }
+
+        .outcome {
+          grid-template-columns: 46px 1fr;
+        }
+
+        .outcome-mark {
+          width: 46px;
+          height: 46px;
+        }
+
+        .flow-step {
+          grid-template-columns: 56px 1fr;
+          gap: 18px;
+          padding: 24px 20px;
+        }
+
+        .session-frame img {
+          min-height: 300px;
+        }
+
+        .step-number {
+          font-size: 34px;
+        }
+
+        .site-footer {
+          padding-bottom: 104px;
+        }
+
+        .mobile-fixed-cta {
+          position: fixed;
+          right: 14px;
+          bottom: 14px;
+          left: 14px;
+          z-index: 30;
+          display: inline-flex;
+          min-height: 58px;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid rgba(255, 255, 255, 0.26);
+          background: var(--red);
+          color: var(--white);
+          font-size: 15px;
+          font-weight: 950;
+          box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+        }
+      }
+
+      @media (max-width: 430px) {
+        .logo {
+          font-size: 15px;
+        }
+
+        .header-cta {
+          max-width: 154px;
+          text-align: center;
+        }
+
+        .hero-inner {
+          min-height: 675px;
+          padding-bottom: 230px;
+        }
+
+        h1 {
+          font-size: 34px;
+        }
+
+        .eyebrow {
+          font-size: 11px;
+        }
+
+        .problem {
+          min-height: auto;
+          padding: 24px;
+        }
+
+        blockquote {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Katsuzen USA">
+      <div class="header-inner">
+        <a class="logo" href="#top" aria-label="Katsuzen USA">KATSUZEN <span>USA</span></a>
+        <a class="header-cta" href="https://calendar.app.google/FQ46xGeYH6WvY2J98">無料相談を予約する</a>
       </div>
-      <div class="hero-visual">
-        <img src="images/hero.png" alt="Tomoko Omori - Katsuzen USA" class="hero-img" onerror="this.style.display='none'">
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<hr class="divider">
-
-<!-- Profile -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">ABOUT</div>
-    <div class="profile">
-      <img src="images/tomoko.jpg" alt="大森智子" class="profile-img">
-      <div class="profile-info">
-        <h2>大森 智子</h2>
-        <div class="title">Katsuzen USA 代表 / リーダーシップコーチ</div>
-        <p>ニューヨークを拠点に、日系企業・個人を対象としたリーダーシップ研修・個別コーチングを提供。アメリカビジネスの現場で通用する「伝える力」と「動かす力」を専門とする。</p>
-      </div>
-    </div>
-
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num">15<span style="font-size:14px">年</span></div>
-        <div class="stat-label">NYビジネス<br>経験</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">200<span style="font-size:14px">+</span></div>
-        <div class="stat-label">研修・<br>コーチング実績</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">日<span style="font-size:14px">/</span>英</div>
-        <div class="stat-label">バイリンガル<br>対応</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- Process -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">HOW IT WORKS</div>
-    <h2 class="section-title">相談の流れ</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <h3>カレンダーで日時を選ぶ</h3>
-          <p>下のボタンから空き時間を確認して予約。自動でリマインダーが届きます。</p>
+    <main id="top">
+      <section class="hero" aria-label="無料個別相談">
+        <div class="hero-inner">
+          <p class="eyebrow">初回30分 完全無料</p>
+          <h1><span class="phrase">アメリカで、</span><strong><span class="phrase">伝わる</span><span class="phrase">リーダー</span></strong><span class="phrase">になる。</span></h1>
+          <p class="hero-lead">
+            NYでリーダーシップ研修を手がけてきた大森智子が、あなたの現状を直接伺い、
+            米国ビジネスで結果につながる次の一手を一緒に明確にします。
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://calendar.app.google/FQ46xGeYH6WvY2J98">30分で次の一手を相談する →</a>
+            <p class="hero-note">Zoom・日本語対応・売り込みなし</p>
+          </div>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <h3>Zoomで30分お話しする</h3>
-          <p>現状・課題・目標を聞かせてください。あなたのケースに合わせてお話しします。</p>
+      </section>
+
+      <section class="proof-strip" aria-label="実績">
+        <div class="proof-inner">
+          <div class="proof-item">
+            <span class="proof-number">15年</span>
+            <span class="proof-label">NYビジネス経験</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">200+</span>
+            <span class="proof-label">研修・コーチング実績</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">日/英</span>
+            <span class="proof-label">バイリンガル対応</span>
+          </div>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <h3>具体的な次の一手を持ち帰る</h3>
-          <p>フィットしても・しなくても、相談後に「次にやること」が明確になります。</p>
+      </section>
+
+      <section class="section dark">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Business Friction</p>
+              <h2><span class="keep-phrase">英語力だけでは</span><span class="nowrap">越えられない</span>壁があります。</h2>
+            </div>
+            <p class="section-copy">
+              米国市場で必要なのは、正しい英語だけではありません。
+              相手が動く順番で伝え、文化差を読み、リーダーとして場を設計する力です。
+            </p>
+          </div>
+          <div class="problem-grid">
+            <article class="problem">
+              <span class="problem-number">01</span>
+              <h3><span class="phrase">意図はあるのに、</span><span class="phrase">チームが動かない</span></h3>
+              <p>説明しているつもりでも、相手の判断基準に届いていない可能性があります。</p>
+            </article>
+            <article class="problem">
+              <span class="problem-number">02</span>
+              <h3><span class="phrase">会議や交渉で</span><span class="phrase">存在感を出しきれない</span></h3>
+              <p>言葉選びより前に、主張の置き方と意思決定の流れを整える必要があります。</p>
+            </article>
+            <article class="problem">
+              <span class="problem-number">03</span>
+              <h3><span class="phrase">米国市場で</span><span class="phrase">何から始めるべきか</span><span class="phrase">迷っている</span></h3>
+              <p>現地感覚を踏まえて、優先順位と最初のアクションを具体化します。</p>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap outcomes">
+          <div class="portrait-frame consultation-visual">
+            <img src="./images/session-single-wide.png" alt="Zoomでの個別相談イメージ" />
+          </div>
+          <div>
+            <p class="section-kicker">30 Minutes Outcome</p>
+            <h2>無料相談で、現状を整理し、次の一手まで落とし込みます。</h2>
+            <div class="outcome-list">
+              <article class="outcome">
+                <span class="outcome-mark">1</span>
+                <div>
+                  <h3>課題の焦点を絞る</h3>
+                  <p>英語、文化差、伝え方、リーダーシップのどこで詰まっているかを整理します。</p>
+                </div>
+              </article>
+              <article class="outcome">
+                <span class="outcome-mark">2</span>
+                <div>
+                  <h3>米国ビジネスの文脈で読み直す</h3>
+                  <p>NYの現場経験をもとに、いま起きている摩擦の背景を見立てます。</p>
+                </div>
+              </article>
+              <article class="outcome">
+                <span class="outcome-mark">3</span>
+                <div>
+                  <h3>明日からの行動を決める</h3>
+                  <p>相談後にすぐ試せる言い方、準備、優先順位を具体化します。</p>
+                </div>
+              </article>
+            </div>
+            <a class="button" href="https://calendar.app.google/FQ46xGeYH6WvY2J98">無料で現状を整理する →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="wrap profile">
+          <div class="profile-copy">
+            <p class="section-kicker">About Tomoko Omori</p>
+            <h2>大森 智子</h2>
+            <p class="role">Katsuzen USA 代表 / リーダーシップコーチ</p>
+            <p>
+              ニューヨークを拠点に、日系企業・個人を対象としたリーダーシップ研修・個別コーチングを提供。
+              アメリカビジネスの現場で通用する「伝える力」と「動かす力」を専門としています。
+            </p>
+            <div class="profile-points">
+              <div class="profile-point">米国フィールドでの実践的なコミュニケーション設計</div>
+              <div class="profile-point">日英の文化差を踏まえたリーダーシップ支援</div>
+              <div class="profile-point">プレゼン・交渉・チームマネジメントの整理</div>
+              <div class="profile-point">売り込みではなく、現状理解を優先する相談設計</div>
+            </div>
+          </div>
+          <div class="portrait-frame">
+            <img src="./images/tomoko-profile.png" alt="大森智子" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">How It Works</p>
+              <h2>相談の流れ</h2>
+            </div>
+            <p class="section-copy">
+              予約から相談まではシンプルです。準備資料は不要。今の状況をそのまま聞かせてください。
+            </p>
+          </div>
+          <div class="flow-layout">
+            <figure class="session-frame">
+              <img src="./images/session-meeting.png" alt="Zoomでの個別相談イメージ" />
+              <figcaption class="session-badge">Zoom Session</figcaption>
+            </figure>
+            <div class="flow">
+              <article class="flow-step">
+                <span class="step-number">1</span>
+                <div>
+                  <h3><span class="phrase">カレンダーで</span><span class="phrase">日時を選ぶ</span></h3>
+                  <p>空き時間を確認して予約。予約後すぐに確認メールが届きます。</p>
+                </div>
+              </article>
+              <article class="flow-step">
+                <span class="step-number">2</span>
+                <div>
+                  <h3><span class="phrase">Zoomで</span><span class="phrase">30分話す</span></h3>
+                  <p>現状・課題・目標を伺い、あなたのケースに合わせて整理します。</p>
+                </div>
+              </article>
+              <article class="flow-step">
+                <span class="step-number">3</span>
+                <div>
+                  <h3><span class="phrase">具体的な</span><span class="phrase">次の一手を</span><span class="phrase">持ち帰る</span></h3>
+                  <p>フィットしても、しなくても、相談後に次にやることが明確になります。</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Voices</p>
+              <h2>参加者の声</h2>
+            </div>
+            <p class="section-copy">
+              30分でも、課題の見え方と行動の順番が変わります。
+            </p>
+          </div>
+          <div class="voice-grid">
+            <blockquote>
+              <p>
+                「最初は半信半疑でしたが、30分で自分の課題がはっきりしました。
+                次のミーティングで早速実践して、チームの反応が明らかに変わりました。」
+              </p>
+              <cite>米系企業勤務・40代男性</cite>
+            </blockquote>
+            <blockquote>
+              <p>
+                「英語でのコミュニケーションに悩んでいましたが、問題は英語力ではなく
+                伝え方の設計だとわかりました。具体的なアドバイスをすぐに使えました。」
+              </p>
+              <cite>日系スタートアップ・30代女性</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section red-band">
+        <div class="wrap final-cta">
+          <div>
+            <p class="section-kicker">No Hard Sell</p>
+            <h2>売り込みは一切ありません。</h2>
+            <p>
+              この相談は、あなたの現状を理解するための時間です。
+              継続サポートが必要な場合にのみ選択肢をご案内し、フィットしなければ率直にお伝えします。
+            </p>
+          </div>
+          <a class="button" href="https://calendar.app.google/FQ46xGeYH6WvY2J98">30分の無料相談を予約する →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© 2026 Katsuzen USA / Tomoko Omori. All rights reserved.</span>
+        <a href="https://tomokoomori.com">tomokoomori.com</a>
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<hr class="divider">
-
-<!-- What we cover -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">WHAT WE COVER</div>
-    <h2 class="section-title">こんな方に話を聞いています</h2>
-    <ul class="expect-list">
-      <li>アメリカでのビジネス展開を検討しているが、何から始めればいいかわからない</li>
-      <li>チームや部下に自分の意図が伝わらず、動いてもらえないと感じている</li>
-      <li>英語でのプレゼン・交渉に自信が持てない</li>
-      <li>NYや米国市場で実績を出したいが、現地感覚がつかめていない</li>
-      <li>リーダーとしての自分をアメリカのフィールドで再定義したい</li>
-    </ul>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- Testimonials -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">VOICES</div>
-    <h2 class="section-title">参加者の声</h2>
-    <div class="testimonial">
-      <blockquote>「最初は半信半疑でしたが、30分で自分の課題がはっきりしました。次のミーティングで早速実践して、チームの反応が明らかに変わりました。」</blockquote>
-      <cite>— 米系企業勤務・40代男性</cite>
-    </div>
-    <div class="testimonial">
-      <blockquote>「英語でのコミュニケーションに悩んでいましたが、問題は英語力ではなく伝え方の設計だとわかりました。具体的なアドバイスをすぐに使えました。」</blockquote>
-      <cite>— 日系スタートアップ・30代女性</cite>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- No-sell + CTA -->
-<section class="section">
-  <div class="container">
-    <div class="no-sell">
-      <h3>売り込みは一切ありません</h3>
-      <p>この相談は、あなたの現状を理解するための時間です。弊社サービスへの勧誘や押し売りは行いません。もし継続的なサポートが必要と判断した場合にのみ、選択肢としてご案内します。フィットしなければ、率直にそうお伝えします。</p>
-    </div>
-
-    <h2 class="section-title" style="text-align:center;">まず、話してみてください。</h2>
-    <a href="https://calendar.app.google/FQ46xGeYH6WvY2J98" target="_blank" class="btn-primary">
-      30分の無料相談を予約する →
-    </a>
-    <p class="btn-note">Zoom・日本語対応・完全無料 ／ 予約後すぐに確認メールが届きます</p>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2026 Katsuzen USA / Tomoko Omori. All rights reserved.</p>
-    <p style="margin-top:6px;"><a href="https://tomokoomori.com">tomokoomori.com</a></p>
-  </div>
-</footer>
-
-</body>
+    <a class="mobile-fixed-cta" href="https://calendar.app.google/FQ46xGeYH6WvY2J98">無料相談を予約する</a>
+  </body>
 </html>
